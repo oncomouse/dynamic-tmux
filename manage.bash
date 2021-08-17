@@ -14,7 +14,7 @@ newpane() {
 
 newpanecurdir() {
   tmux \
-    split-window -t :.0 -c "#{pane_current_path}"\; \
+    split-window -t :."{bottom-right}" -c "#{pane_current_path}"\; \
     select-layout main-vertical\; \
     resize-pane -t :.0 -x "${mfact}"%
 }
